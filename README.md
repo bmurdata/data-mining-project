@@ -1,2 +1,2 @@
-# Team-Minion
-Temporary storehouse for projects by Brian Murphy and China Moxey. 
+# Twitter API Project in Python
+by Brian Murphy and China Moxey. 
