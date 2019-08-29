@@ -1,24 +1,7 @@
-import tweepy 
-#importing tweepy this is a way to access the twiiter API in python
-from tweepy import OAuthHandler
-#OAuthHandler is a way to authorize our app
-
-#variables for API keys
-consumer_key = "BLUhWnwB3aatDeWFQA0uexECl" 
-consumer_secret = "kkHRh2V205lNvw8wE3h19L0L6kefuxWpKc2fK7dN4tg9KqDFKs"
-access_token = "1164676256262184963-BHbxcIGihlqkdIQb1mEPt7vJA0gocH"
-access_secret = "jBKLOqyaLtV0VWpONjyWNlDJfJmcOoizilCRA27ctFTzf"
-
-#Giving OAuthHandler our private consumer key and consumer secret
-auth = OAuthHandler(consumer_key,consumer_secret)
-#Accessing token and access secret using auth variable 
-auth.set_access_token(access_token,access_secret)
-
-#api variable is the entry point for most of the operations we can perform with Twitter
-api = tweepy.API(auth)
-# Copied from the Authorize File, in the event that import Authorize fails.
-
+import tweepy
 import json
+#importing api from authorize.py to gain access
+from Authorize import api
 # json is a built in module that allows us to work with JSON data in Python.
 
 for status in tweepy.Cursor(api.home_timeline).items(10):
