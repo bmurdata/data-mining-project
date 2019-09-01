@@ -8,17 +8,15 @@ fname='tweetstream.json'
 possible_json_string = '{}' #sanity check with simplest json
 #possible_json_string = data #why convert to string at all?
 #possible_json_string = data.decode('utf-8') #intentional conversion
+data = []
 
 
-with open(fname, 'r') as f:
-    jar=f.readline()
-    tweet=json.loads(jar)
-    print(tweet)
-with open(fname, 'r') as f:
 
-    data=json.load(f)
+with open(fname,'r') as f:
 
-    for line in data:
+    for line in f:
+        poke=str(line)
+        print(poke)
         print(line)
-        lines=line
-        tweep = json.loads(lines)
+        tweep = json.loads(poke)
+        print(tweep)
