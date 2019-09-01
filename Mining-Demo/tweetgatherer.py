@@ -13,8 +13,8 @@ import operator
 from collections import Counter
 
 # Time limit set to 20 seconds, if undefined defaults to 60
-#tweetstream = tweepy.Stream(auth, MyListener(time_limit=20))
-#tweetstream.filter(track=['#python'])
+tweetstream = tweepy.Stream(auth, MyListener(time_limit=20))
+tweetstream.filter(track=['#python'])
 
 from collections import defaultdict
 # remember to include the other import from the previous post
@@ -48,7 +48,7 @@ for t1 in com:
 terms_max = sorted(com_max, key=operator.itemgetter(1), reverse=True)
 print(terms_max[:5])
 
-search_word = 'python' # pass a term as a command-line argument
+search_word = 'Python' # pass a term as a command-line argument
 count_search = Counter()
 with open(fname, 'r') as f:
     for line in f:
