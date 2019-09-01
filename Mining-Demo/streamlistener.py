@@ -17,6 +17,7 @@ class MyListener(StreamListener):
                     self.saveFile.write(data)
                     return True
                 else:
+                    self.saveFile.close()
                     return False
 
         except BaseException as e:
