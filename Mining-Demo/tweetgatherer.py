@@ -10,6 +10,7 @@ import json
 import termfrequencies
 from termfrequencies import stop
 import operator
+from collections import Counter
 
 # Time limit set to 20 seconds, if undefined defaults to 60
 #tweetstream = tweepy.Stream(auth, MyListener(time_limit=20))
@@ -25,7 +26,7 @@ fname='tweetstream.json'
 
 with open(fname, 'r') as f:
     for line in f:
-        tweet = json.load(line)
+        tweet = json.loads(line)
         terms_only = [term for term in preprocess(tweet['text']) 
                     if term not in stop
                     and not term.startswith(('#', '@'))]
@@ -47,7 +48,7 @@ for t1 in com:
 terms_max = sorted(com_max, key=operator.itemgetter(1), reverse=True)
 print(terms_max[:5])
 
-search_word = sys.argv[1] # pass a term as a command-line argument
+search_word = 'python' # pass a term as a command-line argument
 count_search = Counter()
 for line in f:
     tweet = json.loads(line)

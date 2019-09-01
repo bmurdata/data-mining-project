@@ -15,7 +15,10 @@ with open(fname, 'r') as f:
     tweet=json.loads(jar)
     print(tweet)
 with open(fname, 'r') as f:
-    for line in f:
+
+    data=json.load(f)
+
+    for line in data:
         print(line)
         lines=line
         tweep = json.loads(lines)
