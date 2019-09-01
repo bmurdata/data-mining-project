@@ -24,3 +24,5 @@ with open(fname, 'r') as f:
          count_all.update(terms_stop)
          #Print the first 5 most frequent words
          print(count_all.most_common(5))
+count_terms_only = [term for term in preprocess(tweet['text'])
+                    if term not in stop and not term.startwith(('#','@'))]
