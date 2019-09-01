@@ -2,6 +2,7 @@
 #We use a custom tokeniser to split the tweets into a list of terms.
 from textpreprocess import preprocess
 import nltk
+from nltk.corpus import stopwords
 import string
 import operator 
 import json
