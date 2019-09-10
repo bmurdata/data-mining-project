@@ -13,7 +13,7 @@ nltk.download('stopwords')
 punctuation = list(string.punctuation)
 stop = stopwords.words('english') + punctuation + ['rt', 'via']
 
-fname = 'my-tweets.json'
+fname = 'tweetstream.json'
 with open(fname, 'r') as f:
      count_all = Counter()
      for line in f:
