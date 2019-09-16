@@ -7,6 +7,9 @@ We learned how to stream tweets,save them into json files, find term co-occurenc
 
 ## Libraries used
 Tweepy- to access the Twitter API.
+
 Vincent- for data visualization.
+
 Json- to manipulate Json files.
+
 Leafletjs- to make a map of the tweets.
